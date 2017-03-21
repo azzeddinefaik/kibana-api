@@ -1,0 +1,21 @@
+visState": "{
+  "title": "Available Memory",
+  "type": "metric",
+  "params": {
+    "handleNoResults": true,
+    "fontSize": "30"
+  },
+  "aggs": [
+    {
+      "id": "1",
+      "enabled": true,
+      "type": "avg",
+      "schema": "metric",
+      "params": {
+        "field": "system.memory.actual.free",
+        "customLabel": "Available Memory"
+      }
+    }
+  ],
+  "listeners": {}
+}
