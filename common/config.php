@@ -1,34 +1,34 @@
 <?php
 
 return $cpu = [[
-    "_id"     => "Apache-ANMOL-CPU",
+    "_id"     => "Disk space distribution",
     "_type"   => "visualization",
     "_source" => [
-        "description"           => " visualisation of ANMOL CPU",
+        "description"           => "Disk space distribution",
         "kibanaSavedObjectMeta" => [
             "searchSourceJSON" => json_encode([
                 "filter" => [],
             ]),
         ],
-        "savedSearchId"         => "Fsstats",
-        "title"                 => "Disk space ANMOL overview",
+        "savedSearchId"         => "Filesystem-stats",
+        "title"                 => "Disk space distribution",
         "uiStateJSON"           => "{}",
         "version"               => "1",
         "visState"              => json_encode(json_decode(file_get_contents(__DIR__ ."/disk/visulisations/disk-space-distribution.json"))),
     ],
 ],
     [
-        "_id"     => "Apache-ANMOL-CPU",
+        "_id"     => "Disk utilization over time",
         "_type"   => "visualization",
         "_source" => [
-            "description"           => " visualisation of ANMOL CPU",
+            "description"           => " Disk utilization over time",
             "kibanaSavedObjectMeta" => [
                 "searchSourceJSON" => json_encode([
                     "filter" => [],
                 ]),
             ],
-            "savedSearchId"         => "Fsstats",
-            "title"                 => "Disk space ANMOL overview",
+            "savedSearchId"         => "Filesystem-stats",
+            "title"                 => "Disk utilization over time",
             "uiStateJSON"           => "{}",
             "version"               => "1",
             "visState"              => json_encode(json_decode(file_get_contents(__DIR__."/disk/visulisations/disk-utilization-over-time.json"))),
