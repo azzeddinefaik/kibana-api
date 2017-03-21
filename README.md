@@ -14,3 +14,4 @@ In Visulisation
 - Disk
 - logs @todo 
 
+How To generate a dashboard
