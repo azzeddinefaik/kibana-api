@@ -1,5 +1,5 @@
 {
-  "title": "cpu-usage",
+  "title": "Disk space overview",
   "type": "metric",
   "params": {
     "handleNoResults": true,
@@ -12,8 +12,8 @@
       "type": "avg",
       "schema": "metric",
       "params": {
-        "field": "system.cpu.idle.pct",
-        "customLabel": "idle"
+        "field": "system.fsstat.total_size.total",
+        "customLabel": "Total disk space"
       }
     },
     {
@@ -22,18 +22,18 @@
       "type": "avg",
       "schema": "metric",
       "params": {
-        "field": "system.cpu.system.pct",
-        "customLabel": "sys"
+        "field": "system.fsstat.total_size.used",
+        "customLabel": "Used disk space"
       }
     },
     {
       "id": "3",
       "enabled": true,
-      "type": "avg",
+      "type": "max",
       "schema": "metric",
       "params": {
-        "field": "system.cpu.user.pct",
-        "customLabel": "user"
+        "field": "system.fsstat.total_files",
+        "customLabel": "Total files"
       }
     }
   ],
