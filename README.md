@@ -12,3 +12,5 @@ In Visulisation
 - cpu
 - memory
 - Disk
+- logs @todo 
+
