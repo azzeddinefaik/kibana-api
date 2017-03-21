@@ -13,6 +13,7 @@ In Visulisation
 - memory
 - Disk
 - logs @todo 
+
 In console Comand:  
 - generate json : How To generate a dashboard 
 - build dashboards / visualizations / searches
