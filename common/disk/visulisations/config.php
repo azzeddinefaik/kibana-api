@@ -14,6 +14,6 @@ return [
         "title"    => "Disk space overview $_visId",
         "uiStateJSON" => "{}",
         "version"  => "1",
-        "visState" => json_encode( json_decode( file_get_contents( __DIR__."/templates/disk-overview-vis.json" ) ) )
+        "visState" => json_encode( json_decode( file_get_contents( __DIR__."/templates/disk-". $_visId ."-vis.json" ) ) )
     ],
 ];

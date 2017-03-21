@@ -14,6 +14,6 @@ return [
         "title"    => "Disk space ANMOL overview",
         "uiStateJSON" => "{}",
         "version"  => "1",
-        "visState" => json_encode( json_decode( file_get_contents( "config/disk/disk-overview-vis.json" ) ) )
+        "visState" => json_encode( json_decode( file_get_contents( "config/disk/disk-fsstats-vis.json" ) ) )
     ],
 ];
