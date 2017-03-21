@@ -1,0 +1,34 @@
+[
+  [
+    {
+      "_id": "Apache-ANMOL-CPU",
+      "_type": "visualization",
+      "_source": {
+        "description": " visualisation of ANMOL CPU",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"filter\":[]}"
+        },
+        "savedSearchId": "Fsstats",
+        "title": "Disk space ANMOL overview",
+        "uiStateJSON": "{}",
+        "version": "1",
+        "visState": "{\"title\":\"Disk space distribution\",\"type\":\"pie\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"isDonut\":false},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"sum\",\"schema\":\"metric\",\"params\":{\"field\":\"system.filesystem.total\",\"customLabel\":\"Total size\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"system.filesystem.mount_point\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Mount point\"}}],\"listeners\":{}}"
+      }
+    },
+    {
+      "_id": "Apache-ANMOL-CPU",
+      "_type": "visualization",
+      "_source": {
+        "description": " visualisation of ANMOL CPU",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"filter\":[]}"
+        },
+        "savedSearchId": "Fsstats",
+        "title": "Disk space ANMOL overview",
+        "uiStateJSON": "{}",
+        "version": "1",
+        "visState": "{\"title\":\"Disk utilization over time\",\"type\":\"area\",\"params\":{\"shareYAxis\":true,\"addTooltip\":true,\"addLegend\":true,\"smoothLines\":false,\"scale\":\"linear\",\"interpolate\":\"linear\",\"mode\":\"stacked\",\"times\":[],\"addTimeMarker\":false,\"defaultYExtents\":false,\"setYExtents\":false,\"yAxis\":{}},\"aggs\":[{\"id\":\"1\",\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"system.filesystem.used.pct\"}},{\"id\":\"2\",\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"interval\":\"auto\",\"customInterval\":\"2h\",\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"type\":\"terms\",\"schema\":\"group\",\"params\":{\"field\":\"system.filesystem.mount_point\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}},{\"id\":\"4\",\"type\":\"terms\",\"schema\":\"split\",\"params\":{\"field\":\"beat.name\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\",\"row\":false}}],\"listeners\":{}}"
+      }
+    }
+  ]
+]
