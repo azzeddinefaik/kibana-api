@@ -14,7 +14,7 @@ return $cpu = [[
         "title"                 => "Disk space distribution", //variable
         "uiStateJSON"           => "{}",
         "version"               => "1",
-        "visState"              => json_encode(json_decode(file_get_contents(__DIR__ ."/disk/visulisations/disk-space-distribution.json"))),
+        "visState"              => json_encode(json_decode(file_get_contents(__DIR__ . "/disk/visulisations/disk-space-distribution.json"))),
     ],
 ],
     [
@@ -31,6 +31,6 @@ return $cpu = [[
             "title"                 => "Disk utilization over time", //variable
             "uiStateJSON"           => "{}",
             "version"               => "1",
-            "visState"              => json_encode(json_decode(file_get_contents(__DIR__."/disk/visulisations/disk-utilization-over-time.json"))),
+            "visState"              => json_encode(json_decode(file_get_contents(__DIR__ . "/disk/visulisations/disk-utilization-over-time.json"))),
         ],
     ]];
