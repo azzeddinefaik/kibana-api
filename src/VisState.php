@@ -1,14 +1,15 @@
 <?php
+namespace app;
+
 
 class VisState
 {
     public $title;
     public $type;
 
-    public function __construct($title,$type)
+    public function __construct($title)
     {
         $this->title = $title;
-        $this->type = $type;
     }
 
     public function  generate(){

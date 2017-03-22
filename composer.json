@@ -1,0 +1,21 @@
+{
+  "name": "devops/kibana-api",
+  "description": " Tools for Deployment and configuration",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Azzeddine Faik",
+      "email": "azz@tajawal.com"
+    }
+  ],
+  "require": {
+    "laravie/parser": "~1.0",
+    "symfony/console": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "app\\": "src/"
+    }
+  }
+}

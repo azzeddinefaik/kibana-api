@@ -1,5 +1,5 @@
 <?php
-
+namespace app;
 /**
  * Class Dashboard
  */
@@ -24,7 +24,7 @@ class Dashboard
      */
     public function addWidget(Widget $widget)
     {
-        $this->widgets[] = $widget;
+        $this->widgets[] = $widget->generate();
 
         return $this;
     }
@@ -47,7 +47,7 @@ class Dashboard
                 "optionJSON"            => [
                     "darkTheme" => false,
                 ],
-                "panelsJSON"            => json_encode(json_decode(file_get_contents( __DIR__ . "/templates/board.json" ))),
+                "panelsJSON"            => json_encode($this->widgets),
                 "timeRestore"           => false,
                 "title"                 => "Disk Test Dashboard",
                 "uiStateJSON"           => "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",

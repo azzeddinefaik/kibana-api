@@ -1,23 +1,25 @@
 <?php
+namespace app;
 
 /**
- * Class Search
+ * Class Visualization
  */
-class Search
+class Visualization
 {
     public $id;
     public $type;
+
     /**
-     * @var SearchSource
+     * @var VisalizationSource
      */
     public $source;
 
-    const TYPE_SEARCH = 'search';
+    const TYPE_VISUALIZATION= 'visualization';
 
-    public function __construct($id, SearchSource $source)
+    public function __construct($id, VisalizationSource $source)
     {
         $this->id     = $id;
-        $this->type   = self::TYPE_SEARCH;
+        $this->type   = self::TYPE_VISUALIZATION;
         $this->source = $source;
 
         return $this;
@@ -33,4 +35,5 @@ class Search
 
         return $search;
     }
+
 }

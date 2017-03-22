@@ -1,4 +1,5 @@
 <?php
+namespace app;
 
 
 class VisalizationSource extends Source

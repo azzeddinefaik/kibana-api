@@ -1,6 +1,8 @@
 <?php
+namespace app\visualization;
+use app;
 
-class Memory extends Visualization
+class Memory extends app\Visualization
 {
     /**
      * Disk constructor.
