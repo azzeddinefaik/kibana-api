@@ -6,7 +6,10 @@ namespace app;
  */
 class Widget
 {
-    public $visualizationId;
+    /**
+     * @var Visualization
+     */
+    public $visualization;
     public $panelIndex;
     public $col;
     public $row;
@@ -16,9 +19,9 @@ class Widget
 
     const TYPE_WIDGET_VIS = "visualization";
 
-    public function __construct($visualizationId, $panelIndex, $col = "1", $row = "1", $sizeX = "12", $sizeY = "20")
+    public function __construct(Visualization $visualization, $panelIndex, $col = "1", $row = "1", $sizeX = "12", $sizeY = "20")
     {
-        $this->visualizationId = $visualizationId;
+        $this->visualization = $visualization;
         $this->panelIndex      = $panelIndex;
         $this->col             = $col;
         $this->row             = $row;
@@ -31,7 +34,7 @@ class Widget
     {
         $widget = [
             "col"        => $this->col,
-            "id"         => $this->visualizationId,
+            "id"         => $this->visualization->id,
             "panelIndex" => $this->panelIndex,
             "row"        => $this->row,
             "size_x"     => $this->sizeX,

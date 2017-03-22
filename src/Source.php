@@ -39,4 +39,8 @@ class Source
         return $this;
     }
 
+    public function generate(){
+        return "[azz Source ]";
+    }
+
 }

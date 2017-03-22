@@ -14,7 +14,7 @@ class SearchSource extends Source
             "columns"=> $this->columns,
             "description"=> $this->description,
             "hits"=> $this->hits,
-            "kibanaSavedObjectMeta"=> $this->kibanaSavedObjectMeta->generate(),
+            "kibanaSavedObjectMeta"=> "Azz test",//$this->kibanaSavedObjectMeta->generate(),
             "sort"=> $this->sort,
             "title" => $this->title,
             "version" => $this->version

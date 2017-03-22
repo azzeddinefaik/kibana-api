@@ -8,13 +8,15 @@ class Visualization
 {
     public $id;
     public $type;
-
+    public $state  = null;
     /**
      * @var VisalizationSource
      */
     public $source;
 
     const TYPE_VISUALIZATION= 'visualization';
+    const BUILT     = '1';
+    const PENDING   = '0';
 
     public function __construct($id, VisalizationSource $source)
     {
@@ -36,4 +38,8 @@ class Visualization
         return $search;
     }
 
+    public function build(){
+        file_put_contents(__DIR__."/output/".$this->id."-".$this->type.".json",json_encode($this->generate()));
+        $this->state = self::BUILT;
+    }
 }

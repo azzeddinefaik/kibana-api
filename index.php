@@ -1,15 +1,29 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
+
 use app\visualization;
 
-$test =  (new app\Dashboard())->addWidget(
+$searchObject = new \app\Search( "212121",
 
-    new app\visualization\Disk("1",
+    new \app\SearchSource("AZZ","desc","0", new app\SearchKibanaSavedObjectMeta("12","hil","[]","query"))
+);
 
-        new app\VisalizationSource("2",
+$searchObject->build();
 
-            new app\VisState("test")
-        )
+$visualizationObject = new Visualization( "1",
+
+    new app\VisalizationSource(
+
+        $searchObject,
+        new app\VisState( "test" )
     )
+);
+
+$visualizationObject->build();
+
+
+$test = (new app\Dashboard())->addWidget(
+    new app\visualization\Disk( $visualizationObject, "1" )
 )->generate();
-print_r($test);
+
+print_r( $test );

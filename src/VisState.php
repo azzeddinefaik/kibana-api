@@ -13,7 +13,7 @@ class VisState
     }
 
     public function  generate(){
-        $visState = "{}";
+        $visState = "{TEST HAHA}";
         return $visState;
     }
 }

@@ -4,15 +4,19 @@ namespace app;
 
 class VisalizationSource extends Source
 {
-    public $savedSearchId;
+    /**
+     * @var Search
+     */
+    public $savedSearch;
     /**
      * @var VisState
      */
     public  $visState;
 
-    public function __construct($savedSearchId,VisState $visState)
+    public function __construct($savedSearch,VisState $visState)
     {
-        $this->savedSearchId = $savedSearchId;
+        $this->savedSearch = $savedSearch;
+
         $this->visState = $visState;
     }
 
@@ -27,7 +31,7 @@ class VisalizationSource extends Source
                     "filter" => [],
                 ] ),
             ],
-            "savedSearchId"                  => $this->savedSearchId,
+            "savedSearchId"                  => $this->savedSearch->id,
             "title"                 => $this->title,
             "uiStateJSON" => "{}",
             "version"               => $this->version,
