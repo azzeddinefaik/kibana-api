@@ -35,12 +35,6 @@ class Dashboard
     public function generate()
     {
 
-//        $content = '';
-//        foreach ($this->widgets as $widget) {
-//
-//            $content .= $widget->title;
-//        }
-
         foreach ($this->widgets as $widget) {
 
             $widget->generate();

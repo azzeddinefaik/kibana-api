@@ -13,4 +13,8 @@ class Widget
     public $sizeY;
     public $type;
     public $title;
+
+    public function generate()
+    {
+    }
 }
