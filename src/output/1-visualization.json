@@ -1,0 +1,17 @@
+{
+  "_id": "1",
+  "_type": "visualization",
+  "_source": {
+    "columns": null,
+    "description": null,
+    "hits": null,
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[]}"
+    },
+    "savedSearchId": "212121",
+    "title": null,
+    "uiStateJSON": "{}",
+    "version": null,
+    "visState": "{TEST HAHA}"
+  }
+}
