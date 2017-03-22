@@ -35,7 +35,7 @@ class VisalizationSource extends Source
             "title"                 => $this->title,
             "uiStateJSON" => "{}",
             "version"               => $this->version,
-            "visState"              => $this->visState->generate()
+            "visState"              => json_encode($this->visState->generate())
         ];
 
         return $visualizationSource;

@@ -1,17 +1,18 @@
-{
-  "_id": "1",
-  "_type": "visualization",
-  "_source": {
-    "columns": null,
-    "description": null,
-    "hits": null,
-    "kibanaSavedObjectMeta": {
-      "searchSourceJSON": "{\"filter\":[]}"
-    },
-    "savedSearchId": "212121",
-    "title": null,
-    "uiStateJSON": "{}",
-    "version": null,
-    "visState": "{TEST HAHA}"
+[
+  {
+    "_id": "1",
+    "_type": "visualization",
+    "_source": {
+      "description": "dsd",
+      "hits": "",
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "fsstats",
+      "title": "null",
+      "uiStateJSON": "{}",
+      "version": "1",
+      "visState": "{\"title\":\"v-State\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"1\",\"isEnabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"system.fsstat.total_size.total\",\"customLabel\":\"Total disk space\"}}]}"
+    }
   }
-}
+]

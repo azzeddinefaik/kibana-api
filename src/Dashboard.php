@@ -6,7 +6,7 @@ namespace app;
 class Dashboard
 {
     public $id;
-    public $typ;
+    public $type;
     public $title;
     public $description;
 
@@ -35,10 +35,10 @@ class Dashboard
     public function generate()
     {
         $dashboard = [
-            "_id"     => "Disk Test Dashboard",
+            "_id"     => "Azz Test Dashboard",
             "_type"   => "dashboard",
             "_source" => [
-                "description"           => " Test Dashboard",
+                "description"           => " Azz Dashboard",
                 "hits"                  => "0",
                 "kibanaSavedObjectMeta" => [
 
@@ -49,11 +49,12 @@ class Dashboard
                 ],
                 "panelsJSON"            => json_encode($this->widgets),
                 "timeRestore"           => false,
-                "title"                 => "Disk Test Dashboard",
+                "title"                 => "Azz Disk Test Dashboard",
                 "uiStateJSON"           => "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
                 "version"               => "1",
             ]
         ];
+        file_put_contents(__DIR__."/output/azz-dashboard.json",json_encode($dashboard));
         return $dashboard;
     }
 
