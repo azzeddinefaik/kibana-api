@@ -22,22 +22,7 @@ class Source
     const SORT = ["@timestamp", "desc"];
     const COLUMNS = ["_source"];
 
-    /**
-     * @return $this
-     */
-    public function construct($title,$description,$hits, SearchKibanaSavedObjectMeta $kibanaSavedObjectMeta){
 
-        $this->description = $description;
-        $this->kibanaSavedObjectMeta = $kibanaSavedObjectMeta;
-        $this->title = $title;
-        $this->hits = $hits;
-
-        $this->columns = self::COLUMNS;
-        $this->sort = self::SORT;
-        $this->version = self::VERSION;
-
-        return $this;
-    }
 
     public function generate(){
         return "[azz Source ]";
