@@ -15,9 +15,10 @@ class VisalizationSource extends Source
 
     public function __construct(Search $savedSearch =null,VisState $visState = null)
     {
-        $this->savedSearch = $savedSearch;
-
-        $this->visState[] = $visState->generate();
+        if(isset($savedSearch))
+            $this->savedSearch = $savedSearch;
+        if(isset($visState))
+            $this->visState[] = $visState->generate();
     }
 
     /**

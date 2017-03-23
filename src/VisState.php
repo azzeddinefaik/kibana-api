@@ -18,7 +18,7 @@ class VisState
      * @param $title
      * @param Aggregations $aggs
      */
-    public function __construct($title, Aggregations $aggs)
+    public function __construct($title = "VisState title", Aggregations $aggs = null)
     {
         $this->title = $title;
         $this->type  = self::VISSTATE_TYPE;
