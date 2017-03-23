@@ -1,0 +1,19 @@
+[{
+  "_id": "Azz Test Dashboard Dashboard",
+  "_type": "dashboard",
+  "_source": {
+    "description": " test Dashboard  Dashboard",
+    "hits": "0",
+    "kibanaSavedObjectMeta": {
+      "searchSourceJSON": "{\"filter\":[{\"query\":{\"query_string\":{\"analyze_wildcard\":true,\"query\":\"*\"}}}]}"
+    },
+    "optionJSON": {
+      "darkTheme": false
+    },
+    "panelsJSON": "[{\"col\":\"1\",\"id\":\"33\",\"panelIndex\":\"4\",\"row\":\"1\",\"size_x\":\"12\",\"size_y\":\"20\",\"type\":\"visualization\"}]",
+    "timeRestore": false,
+    "title": "Azz Disk Test Dashboard",
+    "uiStateJSON": "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
+    "version": "1"
+  }
+}]

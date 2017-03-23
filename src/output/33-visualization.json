@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "33",
+    "_type": "visualization",
+    "_source": {
+      "columns": null,
+      "description": null,
+      "hits": null,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "10000",
+      "title": null,
+      "uiStateJSON": "{}",
+      "version": null,
+      "visState": "{\"title\":\"v-State\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"30\"},\"aggs\":[{\"id\":\"3\",\"isEnabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"system.fsstat.total_size.total\",\"customLabel\":\"Total test disk space\"}}]}"
+    }
+  }
+]
