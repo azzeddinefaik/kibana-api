@@ -22,6 +22,7 @@ class SearchKibanaSavedObjectMeta
 
     public function  generate(){
         $searchKibanaObject = [
+            "searchSourceJSON" => json_encode([
             "index"     => $this->index,
             "highlight" => [
                 "pre_tags"            => [
@@ -42,7 +43,8 @@ class SearchKibanaSavedObjectMeta
                     "analyze_wildcard" => true,
                 ],
             ]
-        ];
+        ])
+    ];
 
         return $searchKibanaObject;
     }
