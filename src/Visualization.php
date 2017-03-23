@@ -37,7 +37,8 @@ class Visualization
      * @return $this
      */
     public function setVisalizationSource(VisalizationSource $source){
-        $this->source = $source;
+        if(isset($source))
+            $this->source = $source;
         return $this;
     }
 

@@ -22,7 +22,8 @@ class VisState
     {
         $this->title = $title;
         $this->type  = self::VISSTATE_TYPE;
-        $this->aggs [] = $aggs;
+        if(isset($aggs))
+            $this->aggs [] = $aggs;
     }
 
 
