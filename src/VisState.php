@@ -13,6 +13,11 @@ class VisState
 
     const VISSTATE_TYPE = "metric";
 
+    /**
+     * VisState constructor.
+     * @param $title
+     * @param Aggregations $aggs
+     */
     public function __construct($title, Aggregations $aggs)
     {
         $this->title = $title;
@@ -20,6 +25,19 @@ class VisState
         $this->aggs [] = $aggs;
     }
 
+
+    /**
+     * @param Aggregations $aggs
+     * @return $this
+     */
+    public function addAggs( Aggregations $aggs){
+        $this->aggs [] = $aggs;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
     public function generate()
     {
 //        $aggs = [];
@@ -40,5 +58,13 @@ class VisState
         ];
 
         return $visState;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType( $type = self::VISSTATE_TYPE )
+    {
+        $this->type = $type;
     }
 }

@@ -18,7 +18,7 @@ class Dashboard
 
 
     /**
-     * @param \Widget $widget
+     * @param Widget $widget
      *
      * @return $this
      */

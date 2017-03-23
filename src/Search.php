@@ -38,9 +38,56 @@ class Search
         return $search;
     }
 
+    /**
+     *
+     */
     public function build(){
         file_put_contents(__DIR__."/output/".$this->id."-".$this->type.".json",json_encode([$this->generate()]));
         $this->state = self::BUILT;
+    }
+
+    /**
+     * @param mixed $id
+     * @return Search
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * @param string $type
+     * @return Search
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * @param null $state
+     * @return Search
+     */
+    public function setState($state)
+    {
+        $this->state = $state;
+
+        return $this;
+    }
+
+    /**
+     * @param SearchSource $source
+     * @return Search
+     */
+    public function setSource($source)
+    {
+        $this->source = $source;
+
+        return $this;
     }
 
 }

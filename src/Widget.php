@@ -19,7 +19,7 @@ class Widget
 
     const TYPE_WIDGET_VIS = "visualization";
 
-    public function __construct(Visualization $visualization, $panelIndex, $col = "1", $row = "1", $sizeX = "12", $sizeY = "20")
+    public function __construct(Visualization $visualization = null ,$panelIndex = "0", $col = "1", $row = "1", $sizeX = "12", $sizeY = "20")
     {
         $this->visualization = $visualization;
         $this->panelIndex      = $panelIndex;
@@ -44,4 +44,61 @@ class Widget
 
         return $widget;
     }
+
+    /**
+     * @param Visualization $visualization
+     */
+    public function setVisualization($visualization)
+    {
+        $this->visualization = $visualization;
+    }
+
+    /**
+     * @param string $panelIndex
+     */
+    public function setPanelIndex($panelIndex)
+    {
+        $this->panelIndex = $panelIndex;
+    }
+
+    /**
+     * @param string $col
+     */
+    public function setCol($col)
+    {
+        $this->col = $col;
+    }
+
+    /**
+     * @param string $row
+     */
+    public function setRow($row)
+    {
+        $this->row = $row;
+    }
+
+    /**
+     * @param string $sizeX
+     */
+    public function setSizeX($sizeX)
+    {
+        $this->sizeX = $sizeX;
+    }
+
+    /**
+     * @param string $sizeY
+     */
+    public function setSizeY($sizeY)
+    {
+        $this->sizeY = $sizeY;
+    }
+
+    /**
+     * @param string $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
 }

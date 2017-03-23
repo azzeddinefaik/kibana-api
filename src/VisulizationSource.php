@@ -13,11 +13,35 @@ class VisalizationSource extends Source
      */
     public  $visState;
 
-    public function __construct($savedSearch,VisState $visState)
+    public function __construct(Search $savedSearch =null,VisState $visState = null)
     {
         $this->savedSearch = $savedSearch;
 
-        $this->visState = $visState;
+        $this->visState[] = $visState->generate();
+    }
+
+    /**
+     * @param VisState $visState
+     *
+     * @return $this
+     */
+    public function addVisState(VisState $visState)
+    {
+        $this->visState[] = $visState->generate();
+
+        return $this;
+    }
+
+    /**
+     * @param Search $savedSearch
+     *
+     * @return $this
+     */
+    public function setSearch(Search $savedSearch)
+    {
+        $this->savedSearch = $savedSearch;
+
+        return $this;
     }
 
     public function generate()
@@ -35,7 +59,7 @@ class VisalizationSource extends Source
             "title"                 => $this->title,
             "uiStateJSON" => "{}",
             "version"               => $this->version,
-            "visState"              => json_encode($this->visState->generate())
+            "visState"              => json_encode($this->visState)
         ];
 
         return $visualizationSource;

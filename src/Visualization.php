@@ -18,6 +18,11 @@ class Visualization
     const BUILT     = '1';
     const PENDING   = '0';
 
+    /**
+     * Visualization constructor.
+     * @param $id
+     * @param VisalizationSource $source
+     */
     public function __construct($id, VisalizationSource $source)
     {
         $this->id     = $id;
@@ -27,6 +32,18 @@ class Visualization
         return $this;
     }
 
+    /**
+     * @param VisalizationSource $source
+     * @return $this
+     */
+    public function setVisalizationSource(VisalizationSource $source){
+        $this->source = $source;
+        return $this;
+    }
+
+    /**
+     * @return array
+     */
     public function generate()
     {
         $search = [
@@ -38,8 +55,12 @@ class Visualization
         return $search;
     }
 
+    /**
+     * @return $this
+     */
     public function build(){
         file_put_contents(__DIR__."/output/".$this->id."-".$this->type.".json",json_encode([$this->generate()]));
         $this->state = self::BUILT;
+        return $this;
     }
 }
