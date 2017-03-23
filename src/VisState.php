@@ -17,7 +17,7 @@ class VisState
     {
         $this->title = $title;
         $this->type  = self::VISSTATE_TYPE;
-        $this->aggs = $aggs;
+        $this->aggs [] = $aggs;
     }
 
     public function generate()

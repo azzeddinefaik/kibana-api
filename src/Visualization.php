@@ -39,7 +39,7 @@ class Visualization
     }
 
     public function build(){
-        file_put_contents(__DIR__."/output/".$this->id."-".$this->type.".json",json_encode($this->generate()));
+        file_put_contents(__DIR__."/output/".$this->id."-".$this->type.".json",json_encode([$this->generate()]));
         $this->state = self::BUILT;
     }
 }

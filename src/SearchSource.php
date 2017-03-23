@@ -25,7 +25,7 @@ class SearchSource
     /**
      * @return $this
      */
-    public function __construct($title,$description,$hits, SearchKibanaSavedObjectMeta $kibanaSavedObjectMeta){
+    public function __construct($title,$description,$hits, SearchKibanaSavedObjectMeta $kibanaSavedObjectMeta = null ) {
 
         $this->description = $description;
         $this->kibanaSavedObjectMeta = $kibanaSavedObjectMeta;

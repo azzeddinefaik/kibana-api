@@ -22,21 +22,19 @@ $kibanMeta = new app\SearchKibanaSavedObjectMeta(
     "metricset.module: system AND metricset.name: fsstat"
 );
 
-$searchSource = new \app\SearchSource( "Ahmed-source", "descriptions", 0, $kibanMeta);
+$searchSource = new \app\SearchSource( "Temitope-source", "descriptions", 0, $kibanMeta );
 
-$searchObject = new \app\Search( "1234", $searchSource );
+$searchObject = new \app\Search( "10000", $searchSource );
 
 $searchObject->build();
 
 
-
-$agg     = new \app\Aggregations( "1", "avg", "metric", true,
+$agg = new \app\Aggregations( "3", "avg", "metric", true,
     ["field"       => "system.fsstat.total_size.total",
-     "customLabel" => "Total disk space"] );
+     "customLabel" => "Total test disk space"] );
 
 
-
-$visualizationObject = new Visualization( "1",
+$visualizationObject = new Visualization( "33",
     new app\VisalizationSource(
         $searchObject,
         new app\VisState( "v-State",
@@ -48,7 +46,7 @@ $visualizationObject->build();
 
 
 $dashboardtest = (new app\Dashboard())->addWidget(
-    new app\visualization\Disk( $visualizationObject, "1" )
+    new app\visualization\Disk( $visualizationObject, "4" )
 )->generate();
 
 print_r( $dashboardtest );
