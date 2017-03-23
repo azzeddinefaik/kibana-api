@@ -51,6 +51,7 @@ class Widget
     public function setVisualization($visualization)
     {
         $this->visualization = $visualization;
+        return $this;
     }
 
     /**

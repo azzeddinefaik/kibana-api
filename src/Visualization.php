@@ -23,7 +23,7 @@ class Visualization
      * @param $id
      * @param VisalizationSource $source
      */
-    public function __construct($id, VisalizationSource $source)
+    public function __construct($id = "01", VisalizationSource $source = null)
     {
         $this->id     = $id;
         $this->type   = self::TYPE_VISUALIZATION;
@@ -37,7 +37,8 @@ class Visualization
      * @return $this
      */
     public function setVisalizationSource(VisalizationSource $source){
-        $this->source = $source;
+        if(isset($source))
+            $this->source = $source;
         return $this;
     }
 

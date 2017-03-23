@@ -18,7 +18,7 @@ class Search
     const BUILT     = '1';
     const PENDING   = '0';
 
-    public function __construct($id, SearchSource $source)
+    public function __construct($id = "001", SearchSource $source = null)
     {
         $this->id     = $id;
         $this->type   = self::TYPE_SEARCH;
@@ -44,6 +44,7 @@ class Search
     public function build(){
         file_put_contents(__DIR__."/output/".$this->id."-".$this->type.".json",json_encode([$this->generate()]));
         $this->state = self::BUILT;
+        return $this;
     }
 
     /**

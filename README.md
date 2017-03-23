@@ -14,4 +14,9 @@ In Visulisation
 - Disk
 - logs @todo 
 
-How To generate a dashboard
+In console Comand:  
+- generate json : How To generate a dashboard 
+- build dashboards / visualizations / searches
+- remove dashboards / visualizations / searches
+- edit dashboards / visualizations / searches
+
