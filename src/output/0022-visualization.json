@@ -1,0 +1,19 @@
+[
+  {
+    "_id": "0022",
+    "_type": "visualization",
+    "_source": {
+      "columns": null,
+      "description": null,
+      "hits": null,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"filter\":[]}"
+      },
+      "savedSearchId": "0022",
+      "title": null,
+      "uiStateJSON": "{}",
+      "version": null,
+      "visState": "[{\"title\":\"VisState title\",\"type\":\"metric\",\"params\":{\"handleNoResults\":true,\"fontSize\":\"30\"},\"aggs\":[null,{\"id\":\"4\",\"isEnabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"system.fsstat.total_size.total\",\"customLabel\":\"AGG AZZ customLabel \"}},{\"id\":\"6\",\"isEnabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"system.fsstat.total_size.total\",\"customLabel\":\"AGG AZZ TEST customLabel \"}}]}]"
+    }
+  }
+]
