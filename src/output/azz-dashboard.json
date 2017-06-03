@@ -10,7 +10,7 @@
     "optionJSON": {
       "darkTheme": false
     },
-    "panelsJSON": "[{\"col\":\"1\",\"id\":\"0011\",\"panelIndex\":\"0\",\"row\":\"1\",\"size_x\":\"12\",\"size_y\":\"20\",\"type\":\"visualization\"}]",
+    "panelsJSON": "[{\"col\":\"1\",\"id\":\"0011\",\"panelIndex\":\"0\",\"row\":\"1\",\"size_x\":\"12\",\"size_y\":\"20\",\"type\":\"visualization\"},{\"col\":\"1\",\"id\":\"0022\",\"panelIndex\":\"0\",\"row\":\"1\",\"size_x\":\"12\",\"size_y\":\"20\",\"type\":\"visualization\"}]",
     "timeRestore": false,
     "title": "Azz Disk Test Dashboard",
     "uiStateJSON": "{\"P-1\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":null,\"direction\":null}}}}}",
