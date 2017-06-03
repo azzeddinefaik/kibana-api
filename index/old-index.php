@@ -48,5 +48,3 @@ $visualizationObject->build();
 $dashboardtest = (new app\Dashboard())->addWidget(
     new app\visualization\Disk( $visualizationObject, "4" )
 )->generate();
-
-print_r( $dashboardtest );
